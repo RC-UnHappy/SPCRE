@@ -1,0 +1,69 @@
+/* Mensaje de información azul */
+.msj_info p, .msj_error p, .msj_ok p, .msj_aviso p{
+	margin: 10px 0px;
+}
+.msj_info .icon-attention-circled{
+	color:#2196F3;
+}
+
+/*azul*/
+.msj_info{
+	background-color: #DAE6F5; 
+	border-left: 6px solid #2196F3;
+	text-align: left;
+	font-size: var(--sz2);
+	padding: 10px;
+}
+/*amarillo*/
+.msj_aviso{
+	background: #F1F19F;
+	border-left: 6px solid #FCB32C;
+	padding: 10px;
+	text-align: left;
+	font-size: var(--sz2);
+}
+/*rojo*/
+.msj_error{
+	background-color: #FFCDCD; 
+	border-left: 6px solid var(--rojo3);
+	padding: 10px;
+	text-align: left;
+	font-size: var(--sz2);
+}
+/*verde*/
+.msj_ok{
+	background-color:#B3EDAA; 
+	border-left: 6px solid var(--verde1);
+	text-align: left;
+	font-size: var(--sz2);
+	padding: 10px;
+}
+.nota{
+	background: #D9EFF5;
+}
+
+/* mensaje de error mas grande*/
+.msj_lg{	
+	position: relative;
+	width: 100%;
+	font-size: 1.3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--fMT);
+	color: var(--gris8);
+	padding: 10px 0;
+}
+.msj_lg h3{
+	transform:scaley(1.1);
+}
+.msj_lg i{
+	margin-right: 10px;
+	font-size: 2rem;
+}
+.msj_lg i.rojo{
+	color:var(--rojo1);
+}
+.msj_lg i.verde{
+	color: var(--verde1);
+}

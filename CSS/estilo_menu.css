@@ -1,0 +1,43 @@
+header nav li{
+	display: inline-block;
+	font-size: 12px;
+	list-style: none;
+	color: #999;
+	margin-right: -5px;
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	padding-top: 25px;
+	border-top: solid 3px #fff;	
+	background: #fff;
+	/*background: grey;*/
+}
+
+header nav li:hover{
+	border-top: solid 3px  #999;
+	cursor: pointer;
+}
+
+
+header nav{
+	position: relative;
+	width: 100%;
+	background: #fff;
+	/*align-items: center;*/
+	text-align: center;
+}
+
+/*nav:hover{
+	top:7px;
+	cursor: pointer;
+}*/
+
+
+header img{
+	position: relative;
+	left: 20px;
+	background: white;
+	top: 5px;
+	width: 120px;
+	height: 90px;
+}

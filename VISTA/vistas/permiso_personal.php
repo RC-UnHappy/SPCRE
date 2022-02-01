@@ -1,0 +1,1 @@
+<?php echo 'vista permiso_personal.php' ?>

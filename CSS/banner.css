@@ -1,0 +1,98 @@
+#banner{
+	position: relative;
+	width: 100%;
+	margin-top: 2rem;
+	height: 40rem;
+	overflow: hidden;
+}
+
+.imgBanner{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: visibility .3s, opacity .3s, transform 15s;
+}
+
+img.zoom{
+	transform: scale(1.2);
+}
+
+#banner #fondo{
+	background: #000;
+	position: absolute; 
+	top:0;left: 0;
+	opacity: .4;
+	width: 100%;
+	height: 100%;
+	transition: all .5s;
+}
+
+#banner .contenedor{
+	position: relative;
+	top: 10%;
+	z-index: 2;
+}
+
+/* Titulo de la aplicacion */
+#banner #titulo{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	font-family: Montserrat-Light;
+	font-size: .9rem;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+#titulo span{
+	font-family: var(--fB);
+}
+
+#banner #nota{
+	color: var(--blanco);
+	position: relative;
+	text-align: center;
+	margin-top: 30px;
+	background: #000;
+	opacity: .8;
+	border-radius: 3px;
+}
+
+
+@media(min-width: 1024px){
+	#banner{
+		height: 32rem;
+	}
+	#banner #titulo{
+		float: left;
+		width: 600px;
+		top: 70px;
+	}
+	#banner #box_login{
+		float: right;
+	}
+	.imgBanner{
+		height: auto;
+	}
+}
+@media(min-width: 1400px){
+	#banner{
+		height: 35rem;
+	}
+	#banner .contenedor{
+		top: 15%;
+	}
+	#banner #titulo{
+		width: 800px;
+	}
+	.imgBanner{
+		top: -100px;
+	}
+}
+
+@media(min-width: 1600px){
+	#banner{
+		background-position: 0 -120px;
+	}
+}

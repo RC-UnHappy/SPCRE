@@ -1,0 +1,85 @@
+.calendario{
+	/*display: flex;*/
+
+}
+
+.calendario_mes_box
+{
+	display: inline-flex;
+	width: 25%;
+	flex-direction: column;
+	padding: .5rem;
+	margin-bottom: 1rem;
+}
+
+.calendario_mes{
+	border: solid 1px var(--gris4);
+	border-radius: 3px;
+	box-shadow: var(--normal);
+	padding: 0 5px 0px 5px;
+	background: var(--blanco);
+	height: 340px;
+}
+
+
+.calendario_mes .nombre_mes{
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding: .5rem .5rem;
+}
+
+.calendario_mes .dias_mes .th_dias{
+	font-weight: bold;
+	color: var(--azul1);
+	background: var(--gris2);
+	border: solid 1px var(--blanco) !important;
+}
+
+.calendario_mes .dias_mes .cl_td{
+	display: inline-flex;
+	border: solid 1px var(--gris2);
+	width: 14.28%;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.calendario_mes .dias_mes .bb{
+	background: var(--gris1);
+}
+
+.calendario_mes .dias_mes .sa_do{
+	background: var(--rojo1);
+	color: var(--blanco);
+}
+
+.calendario_mes .dias_mes .dia_num{
+	background: var(--blanco);
+}
+
+.calendario_mes .dias_mes .dia_num:hover{
+	background: var(--azul1);
+	color: var(--blanco);
+}
+
+.calendario_mes .checked{
+	background: var(--verde1) !important;
+	color: var(--blanco);
+}
+
+
+@media(max-width: 1200px){
+	.calendario_mes_box{
+		width: 33.33333333333333%;
+	}
+}
+
+@media(max-width: 768px){
+	.calendario_mes_box{
+		width: 50%;
+	}
+}

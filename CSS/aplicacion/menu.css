@@ -1,0 +1,171 @@
+/* Seccion de navegacion (Menu vertical) */
+/* Nombre de la escuela */
+#menu #m_sistema{
+	font-family: var(--fEB);
+	font-size: 20px;
+	height: 60px;
+	color: var(--blanco);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: solid 1px rgb(255,255,255,.3);
+	margin: 0px 20px 0px 20px;
+	line-height: .9;
+	margin-top: -20px;
+}
+#m_sistema i{
+	transform: rotate(-15deg);
+	font-size: 30px;
+	margin-right: 10px;
+}
+#m_sistema div{
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+#m_sistema span{
+	font-size: 12px;
+}
+
+/* nodos padres */
+#menu .parent_menu{
+	font-family: var(--fSB);
+	display: block;
+	margin-bottom: 2px;
+	cursor: pointer;
+	padding: 20px 15px 20px 15px;
+	color: #e1e1e1;
+}
+.parent_menu > i{
+	margin-right: 12px;
+	color: #f1f1f1;
+}
+
+#menu .parent_menu:hover, .parent_menu:hover > i{
+	color: var(--blanco);
+}
+
+/* icono > */
+.parent_menu .icon-right-open{
+	float: right;
+	right: 10px;
+	margin-top: 5px;
+	transition: all .5s;
+	font-size: var(--xs);
+}
+
+/* nodos hijos */
+.parent_menu .child_menu{
+	overflow: hidden;
+	max-height: 0;
+	transition: all .3s;
+	width: 100%;
+	font-size: 14px;
+	top: 20px;
+	position: relative;
+	background: #FFF;
+	color: var(--color8);
+	border-radius: 5px;
+	padding: 0px 10px 0px 10px;
+}
+
+.parent_menu .tlt{
+	color: var(--gris8);
+	display: block;
+	padding: 12px 5px 2px 14px;
+	border-radius: 3px;
+	font-family: var(--fSB);
+}
+.tlt .tlt-i{
+	float: right;
+	width: 30px;
+	font-size: 14px;
+}
+#menu .parent_menu .child_menu a{
+	display: block;
+	padding: 12px 5px 12px 14px;
+	border-radius: 3px;
+	color: var(--negro);
+	font-family: var(--fSB);
+}
+
+#menu .parent_menu .child_menu a:hover{
+	background: var(--gris2);
+}
+
+@media(max-width: 1200px){
+	#principal #menu{
+		width: 100px;
+	}
+	#m_sistema div{
+		display: none;
+	}
+	#menu .parent_menu{
+		position: relative;
+		text-align: center;
+		font-size: 12px;
+		padding: 15px;
+	}
+	.parent_menu i{
+		display: block;
+		width: 100%;
+		position: relative;
+		font-size: 18px;
+		margin-right: 0px;
+		margin-bottom: 5px;
+	}
+	.parent_menu .icon-right-open{
+		display: none;
+	}
+	.parent_menu .child_menu{
+		position: absolute;
+		overflow: visible;
+		text-align: left;
+		max-height: 1000px !important;
+		min-width: 210px;
+		left: 120px;
+		padding: 10px !important;
+		box-shadow: 0px 0px 10px 2px var(--gris5);
+		visibility: hidden; 
+		transform: translateX(-10%);
+		opacity: 0;
+		z-index: 3;
+		display: table;
+	}
+	.parent_menu .child_menu:after{
+		content: " ";
+	    position: absolute;
+	    right: 100%;
+	    top: 2rem; 	
+	    margin-top: -10px;
+	    border-width: 10px;
+	    border-style: solid;
+	    border-color:  transparent var(--rojo3) transparent transparent;
+	}
+	.parent_menu:hover .child_menu{
+		opacity: 1;
+		visibility: visible; 
+		transform: translateX(0%);
+	}
+}
+
+
+/* ----------------------- MENUS HORIZONTALES --------------------- */
+.menu-x{
+	display: table;
+	font-family: var(--fSB);
+	color: var(--gris8);
+}
+.menu-x li{
+	display: inline-block;
+	cursor: pointer;
+	padding: 5px 10px 15px 10px;
+	color: var(--gris);
+	margin-right: -2px;
+	border-bottom: solid 2px var(--gris2);
+}
+.menu-x li.selected{
+	color: var(--negro);
+	font-family: var(--fB);
+	border-bottom: solid 3px var(--rojo3);
+}

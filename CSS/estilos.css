@@ -1,0 +1,241 @@
+/* standart.css incluye los iconos y las fuentes */
+@import url('standart.css');
+/* componentes */
+@import url('header.css');
+@import url('banner.css');
+@import url('aplicacion/ventanas.css');
+
+body{
+	background-color: var(--blanco);
+	color: var(--negro);
+	font-family: var(--fL);
+}
+
+.contenedor{
+	width: 95%;
+	margin: auto;
+}
+
+#contenido{
+	font-family: 'Montserrat-Light';
+}
+
+#contenido h2{
+	position: relative;
+	font-size: 1.5rem;
+	color: var(--azul1);
+	margin-bottom: 15px;
+}
+
+.bg_gris{
+	background-color: var(--gris1); 
+}
+.p_tb{
+	padding: 30px 0;
+}
+
+/* Escuela */
+#textos_escuela{
+	position: relative;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .5s;
+	line-height: 1.6;
+}
+#escuela .left{
+	width: 30%;
+	display: flex;
+	align-items: center;
+	height: 300px;
+}
+#escuela .left img{
+	width: 100%;
+}
+#escuela .right{
+	height: 320px;
+	width: 70%;
+	overflow-y: auto;
+	text-align: justify;
+	padding: 0px 20px;
+}
+
+#escuela .texto_escuela p{
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+#escuela h2{
+	position: relative;
+	padding: 10px;
+	border: solid 1px var(--gris3);
+}
+#escuela h2 .icon-down-open{
+	position: absolute;
+	color: var(--gris8);
+	font-size: 20px;
+	transition: all .3s;
+	cursor: pointer;
+	right: 0%;
+	top: 10px;
+}
+
+/* desarrolladores */
+#team{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.team{
+	margin: 10px;
+	width: 260px;
+	padding: 15px;
+	height: 120px;
+	background-color: var(--gris2);
+}
+.team .name{
+	margin-bottom: 10px;
+}
+.team .rol{
+	border-top: solid 1px var(--gris4);
+	padding-top: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #F03A5A;
+	height: 60%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+footer{
+	position: relative;
+	margin: 10px 0;
+	width: 100%;
+	text-align: center;
+	color: var(--gris8);
+	font-size: var(--sz1);
+}
+
+
+
+@media(min-width: 1200px){
+	.contenedor{
+		width: 1160px;
+	}
+	.team{
+		width: 280px;
+	}
+}
+
+/* caja de formularios  */
+.box{
+	position: relative;
+	background: var(--blanco);
+	width: 21rem;
+	border-radius: 5px;
+	padding: 30px 50px 30px 50px;
+	z-index: 2;
+	margin:auto;
+}
+
+.box .icon-cancel{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	float: right;
+	cursor: pointer;
+}
+
+.box a{
+	display: block;
+	text-align: center;
+}
+
+.box h2, .box h3{
+	text-align: center;
+	margin-bottom: 40px;
+	text-align: center;
+}
+.cont_input{
+	position: relative;
+	display: flex;
+	margin-bottom: 24px;
+	border-bottom: solid 1px var(--rojo3);
+	align-items: center;
+}
+.cont_input .left-icon{
+	margin-right: 10px;
+	font-size: 1.2rem;
+}
+
+.input{
+	height: 40px;
+	overflow: hidden;
+	font-size: var(--sz2);
+	background: transparent;
+	border: none;
+	width: 100%;
+}
+
+.input::placeholder{
+	font-size: var(--sz2);
+}
+
+.guion{
+	margin: 0 5px;
+}
+
+/* botón */
+.box .btn_enviar{	
+	position: relative;
+	margin-top: 40px; margin-bottom: 20px;
+	background: var(--rojo1);
+	color:#FFF;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 10px;
+	font-family: var(--fB);
+	border: solid 1px transparent;
+	transition: all .3s;
+	border-radius: 3px;
+}
+.box .btn_enviar i{
+	margin-right: 5px;
+}
+.box .btn_enviar:hover{
+	box-shadow: 3px 3px 10px 1px #CCCCCC;
+	background: #FFF;
+	color: var(--negro);
+	border:solid 1px #c4c4c4;
+}
+.msjBox{
+	position: absolute;
+	top: 0;
+	font-size: 14px;
+	padding:10px;
+	right: 110%;
+	width: 200px;
+	border-radius: 3px;
+	background: var(--rojo1);
+	color: #FFF;
+	display: none;
+}
+.msjBox:after{
+	content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; 	
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent transparent transparent var(--gris5);
+}
+.msjBox i{
+	font-size: 16px;
+	color: #E8E247;
+	margin-right:5px;
+}

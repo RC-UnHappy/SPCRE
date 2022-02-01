@@ -1,0 +1,75 @@
+/* Tipo de letra: Montserrat*/
+@font-face{
+	font-family: Montserrat-Thin;
+	src: url('Montserrat/Montserrat-Thin.otf');
+}
+@font-face{
+	font-family: Montserrat-Light;
+	src: url('Montserrat/Montserrat-Light.otf');
+}
+
+/* Ubuntu */
+@font-face{
+	font-family: 'Ubuntu';
+	src: url('Ubuntu/Ubuntu-R.ttf');
+}
+@font-face{
+	font-family: 'Ubuntu-l';
+	src: url('Ubuntu/Ubuntu-L.ttf');
+}
+@font-face{
+	font-family: 'Ubuntu-li';
+	src: url('Ubuntu/Ubuntu-LI.ttf');
+}
+@font-face{
+	font-family: 'Ubuntu-b';
+	src: url('Ubuntu/Ubuntu-B.ttf');
+}
+@font-face{
+	font-family: 'Ubuntu-m';
+	src: url('Ubuntu/Ubuntu-M.ttf');
+}
+
+/* Nunito Sans */
+@font-face{
+	font-family: 'NunitoSans-Regular';
+	src: url('Nunito-sans/NunitoSans-Regular.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-Italic';
+	src: url('Nunito-sans/NunitoSans-Italic.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-Light';
+	src: url('Nunito-sans/NunitoSans-Light.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-LightItalic';
+	src: url('Nunito-sans/NunitoSans-LightItalic.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-SemiBold';
+	src: url('Nunito-sans/NunitoSans-SemiBold.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-SemiBoldItalic';
+	src: url('Nunito-sans/NunitoSans-SemiBoldItalic.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-Bold';
+	src: url('Nunito-sans/NunitoSans-Bold.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-BoldItalic';
+	src: url('Nunito-sans/NunitoSans-BoldItalic.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-ExtraBold';
+	src: url('Nunito-sans/NunitoSans-ExtraBold.ttf');
+}
+@font-face{
+	font-family: 'NunitoSans-ExtraBoldItalic';
+	src: url('Nunito-sans/NunitoSans-ExtraBoldItalic.ttf');
+}
+
+

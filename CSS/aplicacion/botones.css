@@ -1,0 +1,191 @@
+/* estilo de botones */
+.btn{
+	cursor: pointer;
+	transition: all .3s;
+}
+.btn_sm{
+	font-size:var(--sz1); 
+}
+.btn_md{
+	font-size: var(--sz2);
+	height: 2.2rem
+}
+.btn_lg{
+	font-size: var(--sz3);
+	height: 2.6rem;
+}
+.btn_icon_split, .btn_icon_split_w100{
+	padding: 0;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+	font-family: var(--fR);
+	transition: all .3s;
+}
+.btn_icon_split{
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.btn_icon_split_w100{
+	width: 100%;
+}
+.btn_icon_split_w100 p{
+	text-align: center;
+	width: 100%;
+}
+.btn_icon_split > i, .btn_icon_split_w100 > i{
+	background: rgba(0, 0, 0, 0.15);
+	color: rgba(255, 255, 255, 0.6);
+}
+.btn_lg > i,.btn_lg > p{
+	padding: 0.6rem 0.7rem;	
+}
+.btn_md > i,.btn_md > p{
+	padding: 0.5rem 0.5rem;
+}
+.btn_sm > i,.btn_sm > p{
+	padding: 0.4rem 0.3rem;
+}
+.btn_azul{
+	background: var(--azul1);
+	color: var(--blanco);
+}
+.btn_azul:hover{
+	background: var(--azul2);
+}
+.btn_rojo{
+	background: var(--rojo3);
+	color: var(--blanco);
+}
+.btn_rojo:hover{
+	background: var(--rojo4);
+}
+.btn_verde{
+	background: var(--verde1);
+	color: var(--blanco);
+}
+.btn_verde:hover{
+	background: var(--verde2);
+}
+.btn_amarillo{
+	background: var(--amarillo1);
+	color: var(--blanco);
+}
+.btn_amarillo:hover{
+	background: var(--amarillo2);
+}
+.btn_gris1{
+	background: var(--gris7);
+	color: var(--blanco);
+}
+.btn_gris1:hover{
+	background: var(--gris8);
+}
+.btn_gris2{
+	background: var(--gris3);
+	color: var(--negro);
+}
+.btn_gris2:hover{
+	background: var(--gris5);
+	color: var(--blanco);
+}
+/* forma del boton */
+.btn_circle{
+	border-radius: 50%;
+}
+.btn_normal{
+	border-radius: 3px;
+}
+
+/* boton cuadrado con icono */
+.btn_icon_square{
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid 1px var(--gris4);
+	border-radius: 5px;
+	padding: 10px;
+	background-color: var(--blanco);
+	margin-right: 10px;
+}
+.btn_icon_square.lg{
+	width: 140px;
+	height: 180px;
+}
+.btn_icon_square i{
+	position: relative;
+	transition: all .3s;
+	color: var(--gris8);
+}
+.btn_icon_square.lg i{
+	position: relative;
+	font-size: 60px;
+	width: 120px;
+	text-align: center;
+	border-bottom: solid 1px var(--gris4);
+	padding: 10px 0;
+}
+.btn_icon_square p{
+	position: relative;
+	padding: 10px 0;
+	position: relative;
+	text-align: center;
+}
+.btn_icon_square.lg p{
+	font-size: 14px;
+	font-family: var(--fSB);
+	color: var(--gris8);
+}
+.btn_icon_square:hover{
+	box-shadow: 0px 0px 20px 3px var(--gris3);
+}
+.btn_icon_square:hover i, .btn_icon_square:hover p{
+	color: var(--azul1);
+}
+
+/* boton gris agregar  "+" */
+.btn_add{
+	background-color: var(--gris3);
+	color: var(--gris8);
+	padding: 10px;
+	cursor: pointer;
+}
+.btn_add:hover{
+	background-color: var(--gris2);
+}
+.contItemBox{
+	margin-bottom: 5px;
+	max-height: 100px;
+	overflow: auto;
+	/*background-color: var(--gris1);*/
+}
+.itemBox_inline{
+	position: relative;
+	padding: 2px 8px;
+	background-color: var(--gris2);
+	display: inline-flex;
+	margin: 2px 1px;
+	cursor: pointer;
+	border: solid 1px transparent;
+}
+.itemBox_inline i{
+	display: none;
+	color: var(--rojo1);
+	/*position: absolute;*/
+}
+.itemBox_inline:hover{
+	background-color: var(--blanco); 
+	color: var(--gris8);
+	border-color: var(--gris4);
+	content: "Eliminar";
+}
+.itemBox_inline:hover i{
+	display: block;
+}
+

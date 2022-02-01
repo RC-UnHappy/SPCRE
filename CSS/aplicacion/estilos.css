@@ -1,0 +1,339 @@
+@import url('../standart.css');
+@import url('menu.css');
+@import url('header.css');
+@import url('formularios.css');
+@import url('tablas.css');
+@import url('ventanas.css');
+@import url('mensajes.css');
+@import url('botones.css');
+@import url('calendario.css');
+
+body{
+	font-family: var(--fL);
+	background: var(--gris1);
+	color: var(--negro);
+}
+
+/* principal */
+#principal{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+#menu{
+	position: relative;
+	padding-bottom: 50px;
+	width: 250px;
+	min-height: 100vh;
+	z-index: 3; 
+	background-image: linear-gradient(180deg,var(--rojo1) 30%,var(--rojo2) 100%);
+}
+#contenedor{
+	width: 100%;
+	/*overflow-x: hidden;*/
+}
+#contenido{
+	position: relative;
+	width: 100%;
+	margin-top: 70px;
+	padding: 0 1rem 0 1rem;
+}
+.footer{
+	position: relative;
+	margin-top: 2.5rem;
+	text-align: center;
+	font-size: 13px;
+	color: var(--gris8);
+	padding: 40px 0;
+}
+
+@media(min-width:1300px ){
+	#contenido{
+		width: 80%;
+		margin: 4.5rem auto 0 auto;
+		padding: 0;
+	}
+}
+
+.titulo_m, .titulo_m_md{
+	display: flex;
+	align-items: center;
+}
+.titulo_m{
+	padding-bottom: 15px;
+	margin-bottom: .5rem;
+}
+.titulo_m_md{
+	margin-bottom: .3rem;
+}
+.titulo_m h2, .titulo_m_md h2{
+	position: relative;
+	font-family: var(--fSB);
+	/*transform:scaley(1.15);*/
+	margin-right: 10px;
+}
+.titulo_m i, .titulo_m_md i{
+	color: var(--gris6);
+}
+.titulo_m h2{
+	font-size: var(--sz6);
+}
+.titulo_m i{
+	font-size: 24px;
+}
+.titulo_m_md{
+	font-size: var(--sz1);
+}
+.titulo_m_md i{
+	font-size: 24px;
+}
+
+
+.cajaH_auto{
+	position: relative;
+	display: table;
+	margin: auto;
+}
+
+.caja{
+	background: var(--blanco);
+	box-shadow: var(--normal);
+	line-height: 1.8;
+	border: solid 1px var(--gris4);
+	border-radius: 5px;
+	width: 100%;
+}
+ 
+.padding_B_05 .caja{
+	margin-bottom: .5rem;
+	padding-bottom: 1rem;
+}
+
+.box_info{
+	background: blue;
+	width: 280px;
+	height: 200px;
+	margin: 5px;
+	float: left;
+}
+
+.caja h3{
+	
+	font-family: var(--fB);
+	font-size: var(--sz2);
+	padding: 10px 20px 10px 20px;
+	border-bottom: solid 1px var(--gris4); 
+	/*background: var(--gris2);
+	color: var(--azul1);*/
+	/*background-color: var(--rojo1);*/
+	color: #FFF;
+	background-image: linear-gradient(60deg,var(--rojo1) 30%,var(--rojo2) 100%);
+	margin-bottom: 10px;
+	border-radius: 5px 5px 0 0;
+}
+
+.caja h3 i{
+	margin-right: 5px;
+}
+
+.caja hr{
+	height: 1px;
+	background: var(--gris4);
+	height: 1px;
+	margin: 20px 0 5px 0;
+	border: none;
+}
+
+/* tarjetas */
+.tarjeta{
+	position: relative;
+	width: 98%;
+	border-radius: 3px;
+	padding: 1rem;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	overflow: hidden;
+	font-family: var(--fSB);
+	transition: all .3s;
+	color: var(--gris8);
+	background-color: var(--blanco);
+}
+.tarjeta > div{
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+.tarjeta .cantidad{
+	font-size: 2rem;
+}
+.tarjeta .texto{
+	width: 100%
+	background: blue;
+}
+.tarjeta i{
+	display: block;
+	width: 100%;
+	font-size: 2rem;
+}
+.trjta_md{
+	height: 100px;
+}
+/* bordes de tarjetas */
+.tb-t{
+	border-top: solid 5px;
+}
+.tb-b{
+	border-bottom: solid 5px;
+}
+.tb-l{
+	border-left: solid 5px;
+}
+.tb-r{
+	border-right: solid 5px;
+}
+/* colores de border */
+.tb-azul{
+	border-color: var(--azul1);
+}
+.tb-ama{
+	border-color: var(--amarillo1);
+}
+.tb-rojo{
+	border-color: #E6254E;
+}
+.tb-verde{
+	border-color: var(--verde1);
+}
+
+
+
+/* error 404 */
+.error404{
+	width: 100%;
+	text-align: center;
+}
+.error404 h3{
+	font-size: 50px;
+}
+
+/* INICIO */
+/* bienvenido */
+#bienvenido{
+	padding: 20px;
+	width: 100%;
+	text-align: center;
+	font-family: 'Montserrat-Light';
+	margin-bottom: 2.5rem;
+}
+#bienvenido h1{
+	font-size: 24px;
+	margin-bottom: 10px;
+	/*background: blue;*/
+}
+#bienvenido p{
+	font-size: 22px;
+}
+#cont_usuario{
+	position: relative;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#cont_usuario #img_usuario{
+	position: relative;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: solid 3px var(--gris3);	
+	margin-bottom: 10px;
+}
+#img_usuario img{
+	width: 100%;
+}
+#ult_acceso{
+	font-size: 14px;
+}
+
+/* Columna de hora y calendario */
+#hora_calendario{
+	/*padding: 0 20px;*/
+	background: var(--blanco);
+	width: 90%;
+	margin: auto;
+	/*height: 280px;*/
+	box-shadow: 0px 0px 20px 1px var(--gris2);
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+#calendar_top{
+	height: 40px;
+	background: var(--rojo1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	font-family: "Montserrat-Light";
+	color: var(--blanco);
+}
+
+#calendar_mid p{
+	text-align: center;
+	margin: 5px;
+}
+#calendar_mid .mes, #calendar_mid .year{
+	font-size: 2rem;
+	color: var(--gris8);
+}
+#calendar_mid .dia{
+	font-size: 4rem;
+}
+
+#reloj{
+	background: var(--gris3);
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 10px;
+	margin-top: 20px;
+}
+#reloj #am_pm{
+	font-size: 14px;
+}
+
+/* capas de despliegue */
+.dsp_boton{
+	padding: 10px;
+	background: var(--gris2);
+	height: 60px;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.dsp_boton .dsp_texto{
+	float: left;
+	color: var(--azul1);
+	font-family: var(--fB);
+	margin-top: 6px;
+}
+
+.dsp_boton .dsp_icono{
+	float: right;
+	font-size: 20px;
+}
+
+.dsp_hijo{
+	position: relative;
+	overflow: hidden;
+	max-height: 0;
+	transition: all .5s;
+}
+
+
+/*pd_LR_30px*/

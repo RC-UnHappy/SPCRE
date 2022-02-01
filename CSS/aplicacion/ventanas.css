@@ -1,0 +1,157 @@
+/* BACKGROUND DE COLOR NEGRO */
+#background-black{
+	background: #111;
+	width: 100%; height: 100vh; z-index: 3;
+	top: 0; left: 0; position: fixed;
+	opacity: 0; visibility: hidden;
+	transition: all .3s;
+}
+/* CONTENEDOR DE VENTANAS */
+#cont-windows{
+	width: 100%; height: 100vh; z-index: 4;
+	top: 0; left: 0; position: fixed;
+	opacity: 0; visibility: hidden;
+	transition: all .3s;
+}
+#cont-windows > div {
+	visibility: hidden; opacity: 0;
+	position: relative;
+}
+/* ventana cerrar sesion */
+#window-logout{
+	background: #FBFBFB;
+	height: 180px;
+	width: 380px;
+	margin: auto;
+	border-radius: 2px;
+	text-align: center;
+	padding: 30px;
+	top: 25vh;
+}
+#window-logout h2{
+	/*font-family: var(--fSB);*/
+	font-family:  'Montserrat-Light';
+	font-size: var(--sz4);
+	transform: scaleY(1.1);
+	color: var(--negro);
+}
+/* botones */
+#window-logout div{
+	float: left;
+	margin: 10px;
+	width: 140px;
+	padding: 12px 0px 12px 0px;
+	text-align: center;
+	margin-top: 40px;
+	color: var(--blanco);
+	font-size: 14px;
+	cursor: pointer;
+	transition: all .3s;
+}
+/* botones */
+#window-logout #logout-si{
+	background: var(--verde1);
+}
+#window-logout #logout-no{
+	background: var(--rojo1);
+}
+#window-logout #logout-si,#window-logout #logout-no{
+	transition: all .3s;
+	font-family: var(--fSB);
+	color: var(--blanco);
+	font-size: var(--sz4);
+	border-radius: 3px;
+}
+#window-logout #logout-si:hover, #window-logout #logout-no:hover{
+	background: #FFF;
+	box-shadow: 3px 3px 10px 1px #CCCCCC;
+	color: var(--negro);
+}
+/* Ventana donde muestra notificaciones */
+#window-not{
+	background: var(--blanco);
+	width: 500px;
+	margin: auto;
+	border-radius: 2px;
+	padding: 1rem;
+	top: -7rem;
+	/*overflow: hidden;*/
+}
+
+#window-not h4{
+	position: relative;
+	font-weight: normal;
+	text-align: left;
+}
+#window-not div#msj{
+	position: relative;
+	text-align: center;
+	font-size: var(--sz4);
+	margin: 20px 0;
+}
+#window-not div#bot{
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+/*#window-not div label{
+	float: left;
+}*/
+#window-not div#bot #b2{
+	display: none;
+}
+#window-not div#bot label{
+	margin-left: 10px;
+}
+#window-not div#bot input[type="button"]{
+	display: none;
+}
+#msj .icon-ok-circled2{
+	color: var(--verde1);
+	font-size: 30px;
+}
+#msj .icon-cancel-circled2{
+	color: var(--rojo3);
+	font-size: 30px;
+}
+#msj .icon-attention-circled{
+	color: var(--azul1);
+	font-size: 30px;
+}
+#msj .icon-attention{
+	font-size: 40px;
+	color:#A5A5A5;
+}
+
+/* contenedor de ventanas */
+.cont_window{
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	z-index: 3;
+	background: rgb(0,0,0,.4);
+	height: 100vh;
+	transition: all .3s;
+}
+
+/* ventana improvisada a ultimo minuto :V */
+.w-float{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0; left: 0;
+	z-index: 3;
+	background: rgb(0,0,0,.4);
+	transition: all .3s;
+	visibility: hidden;
+	opacity: 0;
+}
+.w-float .box-w-float{
+	position: relative;
+	margin: auto;
+	background: #FFF;
+	border-radius: 5px;
+	display: table;
+	padding: 20px;
+	top: 10vh;
+}

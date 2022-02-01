@@ -1,0 +1,400 @@
+/* caja que contiene el input*/
+.contInput{
+	position: relative;
+	margin: 10px;
+}
+.contInput2{
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.contInput2Item{
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border: solid 1px var(--gris4);
+	border-radius: 5px;
+	overflow: hidden;
+	width: auto;
+}
+/* items a la izquierda*/
+.in_left{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	width: 24%;
+}
+.in_left select{
+	width: 100%;
+	border: none;
+	padding: 0 10px;
+	font-size: 14px;
+	text-align: center;
+}
+.in_left i{
+	position: absolute;
+	width: 22px;
+	right: 0;
+	border-right: solid 1px var(--gris4);
+	background-color: var(--blanco);
+	height: 100%;
+	display: flex; 
+	align-items: center;
+}
+/* items a la derecha*/
+.in_right{
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 75%;
+}
+.in_right input[type="text"]{
+	border: none;
+	padding: 8px 10px 8px 10px;
+	font-size: var(--sz2);
+	font-family: var(--fR);
+	height: 100%;
+}
+.in_right .btn{
+	position: relative;
+	padding: 10px;
+	font-size: 14px;
+}
+.contInput2Item.md{
+	height: 2.2rem;
+}
+.contInput2Item.md input[type="text"],.contInput2Item.md select{
+	font-size: 14px;
+}
+
+/* inputs texto,select,password*/
+.input{
+	position: relative;
+	padding: 8px 10px 8px 10px;
+	font-size: var(--sz2);
+	border: solid 1px var(--gris4);
+	border-radius: 3px;
+	width: 100%;
+	font-family: var(--fR);
+}
+
+.input_sm{
+	padding: 2px;
+	border-radius: 3px;
+	border: solid 1px var(--gris5);
+}
+
+textarea.input{
+	min-width: 100%;
+	max-width: 100%;
+	/*min-height: 80px;*/
+	/*max-height: 80px;*/
+	font-size: 14px;
+	text-align: justify;
+	/*white-space: normal;*/
+}
+
+.input:focus{
+	background: #FFF;
+	box-shadow: 0px 0px 10px 1px #D0E7EC;
+	transition: all .3s;
+}
+input[type="text"]:disabled, input[type="password"]:disabled, select:disabled, textarea:readonly{
+	background: var(--gris1);
+	color: var(--gris7);
+	cursor: not-allowed;
+}
+
+
+/* texto encima del input*/
+.nomInput{
+	font-family: var(--fB);
+	font-size: 14px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	color: var(--negro);
+}
+.nomInput .icon-attention-circled{
+	font-size: 16px;
+	color: var(--azul1);
+}
+
+/* mensajes de alerta debajo de los inputs*/
+.mjB{ 
+	display: none;
+	position: absolute;
+	padding: .4rem .2rem;
+	font-size: var(--sz1);
+	color: var(--blanco);
+	background-color: var(--rojo3);
+	border-radius: 5px;
+	z-index: 1;
+	line-height: 1.5;
+	min-width: 10rem;
+}
+.mjB:after{
+	content: " ";
+    position: absolute;
+    border-style: solid;
+}
+.mjB.mjBr{
+	position: absolute;
+	left: 105%;
+	top: 45%;
+}
+.mjB.mjBr:after{
+    top:20%;
+    right:100%; 
+    border-width: 10px;
+    border-color: transparent var(--gris5) transparent transparent;
+}
+.mjB.mjBl{
+	position: absolute;
+	right: 105%;
+	top: 45%;
+}
+.mjB.mjBl:after{
+    top:20%;
+    left: 100%; 
+    border-width: 10px;
+    border-color: transparent transparent transparent var(--gris5);
+}
+.mjB .icon-attention{
+	margin-right: 2px;
+	color: var(--amarillo1);
+}
+
+.msjBox{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	float: left;
+	min-width: 10rem;
+	padding: .4rem .2rem;
+	margin: 0.125rem 0 0;
+	font-size: var(--sz1);
+	color: var(--blanco);
+	background-color: var(--rojo3);
+	background-clip: padding-box;
+	border-radius: 5px;
+	z-index: 1;
+	line-height: 1.5;
+	/*box-shadow: 0px 0px 10px 2px var(--gris5);*/
+}
+.msjBox:after{
+	content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 10px; 	
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent transparent var(--gris5) transparent;
+}
+.msjBox .icon-attention{
+	margin-right: 2px;
+	color: var(--amarillo1);
+}
+
+/* cajas que contienen los formularios */
+.formCaja{
+	display: none;
+}
+/* VENTANA CONTENEDOR DE FORMULARIOS */
+#window-cont-formulario{
+	position: relative;
+	top: 5vh;
+	z-index: 102;
+	margin: auto;
+	display: table;
+	font-size: 14px;
+}
+.W-form{
+	position: relative;
+	background: #FFF;
+	border-radius: 3px;
+	display: none;
+}
+.W-top{
+	padding: 10px;
+	border-bottom:solid 1px var(--gris3);
+}
+.W-top .W-nom{
+	float: left;
+	font-weight: normal;
+}
+.W-top .icon-cancel{
+	float: right;
+}
+.W-body{
+	padding: 10px 60px 30px 60px;
+}
+.W-bottom{
+	padding: 10px;
+	border-top:solid 1px var(--gris3);
+	display: flex !important;  
+	justify-content: flex-end !important; 
+}
+/* botones */
+.W-bottom label{
+	margin-left: 5px;
+}
+.W-form .row{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	border-bottom: transparent;
+}
+.W-form .row .col-200{
+	position: relative;
+	margin: auto;
+}
+
+.scroll-y{
+	overflow-y: auto;
+	word-wrap: break-word;
+	max-height: 70vh;
+}
+
+/* caja que muestra el autocompletado*/
+.auto-completeBox{
+	position: absolute;
+	background: red;
+	top: 60px;
+	left: 0;
+	min-width: 100%;
+	z-index: 1;
+	background: #FFF;
+	padding: 10px 0px 10px 0px;
+	border-radius: 2px;
+	border: solid 1px #B7B7B7;
+	box-shadow: 0px 5px 10px 3px #C1C1C1;
+	color: var(--gris);
+	visibility: hidden;
+	opacity: 0;
+	transition: all .4s;
+}
+
+.auto-completeBox:after{
+	content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent transparent #989898 transparent;
+}
+.auto-completeBox p{
+	padding: 0px 10px 0px 10px;
+	font-size: 12px;
+}
+.auto-completeBox p:hover{
+	cursor: pointer;
+	color: var(--azul-claro);
+	background: #EEE;
+}
+
+@media(min-width: 1500px){
+	#window-contenedor{
+		top: 60px;
+	}
+	#div_formulario section#box-b{
+		height: auto;
+	}
+}
+
+/* campo de texto y boton */
+.input_and_btn{
+	padding: 0;
+	transition: all .3s;
+	overflow: hidden;
+	display: inline-flex;
+	align-items: center;
+}
+.input_and_btn p{
+	margin-right: .5rem;
+	font-family: var(--fB);
+}
+
+
+/* Foto persona */
+.foto{
+	position: relative;
+	border-radius: 3px;
+	overflow: hidden;
+	width: 210px;
+	height: 260px;
+	border: solid 1px var(--gris4);
+	margin: 10px;
+}
+
+.foto .contFoto{
+	position: relative;
+	height: 220px;
+}
+
+.foto .btn{
+	height: 40px;
+	position: relative;
+	bottom: 0;
+}
+
+.foto img{
+	width: 100%;
+	height: 100%;
+}
+
+.contInput3{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 20px;
+	height: 40px;
+	font-size: 16px;
+	border: solid 1px var(--gris4);
+	overflow: hidden;
+	border-radius: 3px;
+}
+.contInput3 div{
+	display: inline-flex;
+	align-items: center;
+}
+.contInput3 .i3_left{
+	width: 50px;
+	height: 100%;
+	background: var(--gris4);
+}
+.contInput3 .i3_right{
+	width: 100%;
+	height: 100%;
+	background: var(--blanco);
+}
+.contInput3 .i3_left i{
+	text-align: center;
+	width: 100%;
+}
+.contInput3 input[type="text"]{
+	position: relative;
+	border: none;
+	font-size: 14px;
+	padding-left: 10px;
+	width: 100%;
+}
+.contInput3 select{
+	border: none;
+	font-size: 14px;
+	padding-left: 10px;
+	width: 100%;
+}
+.nomInput3{
+	display: block;
+	position: relative;
+	padding: 10px 0px;
+}
