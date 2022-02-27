@@ -1,5 +1,5 @@
-<?php 
-	include_once('../CONTROL/c_inicio.php');
+<?php
+include_once('../CONTROL/c_inicio.php');
 ?>
 <div class="titulo_m">
 	<h2><i class="icon-home"></i> Inicio</h2>
@@ -58,9 +58,9 @@
 
 
 <div id="bienvenido">
-	<h1 style="font-size:2.5rem;"><i class="icon-graduation-cap"></i> U.E.N.B <b class="text_rosa">"SAMUEL ROBINSON"</b></h1>
+	<h1 style="font-size:2.5rem;"><i class="icon-graduation-cap"></i> Centro de Educación Inicial <b class="text_rosa"> "La Medinera"</b></h1>
 	<h1>SOFTWARE PARA EL CONTROL DE ACTIVIDADES ACADÉMICAS Y ADMINISTRATIVAS</h1>
-	<p>Año escolar: <b><?php echo $periodoEsc;?></b></p>
+	<p>Año escolar: <b><?php echo $periodoEsc; ?></b></p>
 </div>
 
 
@@ -69,17 +69,17 @@
 	<div class="col col50">
 		<div id="cont_usuario">
 			<div id="img_usuario">
-				<img src="<?php echo $url_foto;?>" class="w250 centrado" />	
+				<img src="<?php echo $url_foto; ?>" class="w250 centrado" />
 			</div>
 			<div id="nombre">
-				<b><?php echo $_SESSION['vsn_nombre'].' '.$_SESSION['vsn_apellido']; ?></b>
+				<b><?php echo $_SESSION['vsn_nombre'] . ' ' . $_SESSION['vsn_apellido']; ?></b>
 			</div>
 			<div id="ult_acceso">
-				<p>Ultimo Acceso: 
+				<p>Ultimo Acceso:
 					<?php
-						$fecha = new DateTime($_SESSION['vsn_ultconex']);
-						echo $fecha->format('d/m/Y \a \l\a\s g:ia');
-					?>		
+					$fecha = new DateTime($_SESSION['vsn_ultconex']);
+					echo $fecha->format('d/m/Y \a \l\a\s g:ia');
+					?>
 				</p>
 			</div>
 		</div>
@@ -97,13 +97,13 @@
 					<p class="year"><?php echo $year; ?></p>
 				</div>
 				<div id="calendar_bot">
-					
+
 				</div>
 			</div>
 			<div id="reloj">
-				<label id="hora"><?php echo $hora;?></label>:
-				<label id="minuto"><?php echo $min;?></label>:
-				<label id="segundo"><?php echo $seg;?></label>
+				<label id="hora"><?php echo $hora; ?></label>:
+				<label id="minuto"><?php echo $min; ?></label>:
+				<label id="segundo"><?php echo $seg; ?></label>
 				<label id="am_pm"><?php echo $a; ?></label>
 			</div>
 		</div>
@@ -111,52 +111,50 @@
 </div>
 
 <script type="text/javascript">
-	window.onload = function(){
-		if( getVariable('seg') ){
+	window.onload = function() {
+		if (getVariable('seg')) {
 			// muestra mensaje importante al usuario para configurar datos de seguridad
 			document.getElementById('b1').style.display = 'none';
 			msj = '<b>Importante </b><i class="icon-attention-circled"></i>';
 			p = '<p class="msj_aviso">Por seguridad se recomienda cambiar la <b>contraseña</b> y elegir <b>preguntas de seguridad</b>. Por favor, haga click <a href="?Perfil&form=2" class="text_azul text_bold">aquí</a> para ir configuración de usuario.</p>';
-			OpenWindowNot(msj+p);
+			OpenWindowNot(msj + p);
 		}
 		reloj();
 	}
 
-	function reloj(){
+	function reloj() {
 		hora = document.getElementById('hora');
 		min = document.getElementById('minuto');
 		seg = document.getElementById('segundo');
 		ampm = document.getElementById('am_pm');
 
-		objReloj = setInterval( function(){
-			seg.innerHTML = parseFloat(seg.innerHTML)+1;
-			if( parseFloat(seg.innerHTML) < 10 ){
-				seg.innerHTML = '0'+seg.innerHTML;
+		objReloj = setInterval(function() {
+			seg.innerHTML = parseFloat(seg.innerHTML) + 1;
+			if (parseFloat(seg.innerHTML) < 10) {
+				seg.innerHTML = '0' + seg.innerHTML;
 			}
-			if( parseFloat(seg.innerHTML) == 60 ){
+			if (parseFloat(seg.innerHTML) == 60) {
 				seg.innerHTML = '00';
-				min.innerHTML = parseFloat(min.innerHTML)+1;
+				min.innerHTML = parseFloat(min.innerHTML) + 1;
 
-				if( parseFloat(min.innerHTML) < 10 ){
-					min.innerHTML = '0'+min.innerHTML;
+				if (parseFloat(min.innerHTML) < 10) {
+					min.innerHTML = '0' + min.innerHTML;
 				}
 
-				if(parseFloat(min.innerHTML) == 60 ){
+				if (parseFloat(min.innerHTML) == 60) {
 					min.innerHTML = '00';
-					hora.innerHTML = parseFloat(hora.innerHTML)+1;
+					hora.innerHTML = parseFloat(hora.innerHTML) + 1;
 
-					if( parseFloat(hora.innerHTML) < 10 ){
-						hora.innerHTML = '0'+hora.innerHTML;
+					if (parseFloat(hora.innerHTML) < 10) {
+						hora.innerHTML = '0' + hora.innerHTML;
 					}
-					if( parseFloat(hora.innerHTML) == 12 && ampm.innerHTML == 'am' ){
+					if (parseFloat(hora.innerHTML) == 12 && ampm.innerHTML == 'am') {
 						ampm.innerHTML = 'pm';
-					}
-					else if( parseFloat(hora.innerHTML) == 12 && ampm.innerHTML == 'pm'){
+					} else if (parseFloat(hora.innerHTML) == 12 && ampm.innerHTML == 'pm') {
 						ampm.innerHTML = 'am';
 					}
 				}
 			}
-		},1000);
+		}, 1000);
 	}
 </script>
-

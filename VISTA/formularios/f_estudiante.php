@@ -1004,7 +1004,7 @@ if( $sta_AESC == 'C' ){
 							<div class="contInput">
 								<p class="left nomInput"><i class="icon-attention-circled"></i>Procedencia</p>
 								<div class="right nomInput">Marcar para esta Inst. <input type="checkbox" name="marca" onclick="marcaProcedencia(this)" style="margin-left: 5px;"></div>
-								<input type="text" name="procedencia" class="input" placeholder='Ej: U.E.N.B "SAMUEL ROBINSON"' value='<?php echo $procedencia; ?>'/>
+								<input type="text" name="procedencia" class="input" placeholder='Centro de Educación Incial Bolivariana "La Medinera"' value='<?php echo $procedencia; ?>'/>
 							</div>
 						</div>
 						<div class="col col50">

@@ -1,42 +1,44 @@
-<?php 
-	session_start();
-	#header('Content-Type: text/html; charset=utf-8'); 
-	if( isset( $_SESSION['vsn_user'] ) ){ # la sesion se encuentra abierta
-		include_once('CONTROL/logout.php');
-		destruirSesion(); # cierra las sesiones (ver controlador logout.php)
-	}
-	# recuperar contraseña:
-	$varRecPass = 'false';
-	$codPer = '';
-	$preg1 = '';
-	$preg2 = '';
-	if( isset($_SESSION['recPass']) ){
-		$codPer  = $_SESSION['codPer'];
-		$preg1 = '<p style="font-size:14px;"><b>¿'.$_SESSION['p1'].'?</b></p>';
-		$preg2 = '<p style="font-size:14px;"><b>¿'.$_SESSION['p2'].'?</b></p>';
-		$varRecPass = 'true';
-	}
+<?php
+session_start();
+#header('Content-Type: text/html; charset=utf-8'); 
+if (isset($_SESSION['vsn_user'])) { # la sesion se encuentra abierta
+	include_once('CONTROL/logout.php');
+	destruirSesion(); # cierra las sesiones (ver controlador logout.php)
+}
+# recuperar contraseña:
+$varRecPass = 'false';
+$codPer = '';
+$preg1 = '';
+$preg2 = '';
+if (isset($_SESSION['recPass'])) {
+	$codPer  = $_SESSION['codPer'];
+	$preg1 = '<p style="font-size:14px;"><b>¿' . $_SESSION['p1'] . '?</b></p>';
+	$preg2 = '<p style="font-size:14px;"><b>¿' . $_SESSION['p2'] . '?</b></p>';
+	$varRecPass = 'true';
+}
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />
 	<link rel="stylesheet" type="text/css" href="CSS/estilos.css" />
 	<script type="text/javascript" src="JAVASCRIPT/funciones.js"></script>
 	<script type="text/javascript" src="JAVASCRIPT/homepage.js"></script>
-	<title> U.E.N.B Samuel Robinson </title>
+	<title> Centro de Educación Inicial "La Medinera" </title>
 </head>
+
 <body>
 	<header>
 		<div class="contenedor">
 			<img src="IMG/bandera.png">
 			<div id="gob">
-				Gobierno <b>Bolivariano</b> <br/> de Venezuela
+				Gobierno <b>Bolivariano</b> <br /> de Venezuela
 			</div>
 
 			<div class="parte2">
-				Ministerio del Poder Popular <br/> para la <b>Educación</b>
+				Ministerio del Poder Popular <br /> para la <b>Educación</b>
 			</div>
 
 			<div class="parte2">
@@ -44,57 +46,57 @@
 			</div>
 
 			<div class="parte2" id="sm">
-				U.E.N.B <b>"Samuel Robinson"</b>
+				Centro de Educación Inicial <b>"La Medinera"</b>
 			</div>
 		</div>
 	</header>
 	<!-- caja contenedor del formulario login -->
 	<div id="banner">
 		<img src="IMG/banner.jpg" class="imgBanner" />
-		<img src="IMG/banner2.jpg" class="imgBanner hidden"/>
-		<img src="IMG/banner3.jpg" class="imgBanner hidden"/>
-		<img src="IMG/banner4.jpg" class="imgBanner hidden"/>
+		<img src="IMG/banner2.jpg" class="imgBanner hidden" />
+		<img src="IMG/banner3.jpg" class="imgBanner hidden" />
+		<img src="IMG/banner4.jpg" class="imgBanner hidden" />
 
 		<div class="contenedor">
 			<div id="titulo">
 				<h1>
-					SOFTWARE PARA EL CONTROL DE ACTIVIDADES ACADÉMICAS Y ADMINISTRATIVAS EN LA U.E.N.B <span>“SAMUEL ROBINSON”</span>  Araure – Portuguesa 
+					SOFTWARE PARA EL CONTROL DE ACTIVIDADES ACADÉMICAS Y ADMINISTRATIVAS EN <span>Centro de Educación Inicial "La Medinera"</span> Araure – Portuguesa
 				</h1>
 			</div>
 			<!-- formulario iniciar sesion -->
 			<div id="box_login" class="box">
-				<form name="form_login" method="POST" action="CONTROL/login.php"/>
-					<h2>Iniciar Sesión</h2>
-					<div class="cont_input">
-						<i class="icon-user left-icon"></i>
-						<div style="overflow: hidden; width: 20px;">
-							<select name="d_ID" class="input" style="width: 50px;">
-								<option value="V">V</option>
-								<option value="E">E</option>
-							</select>
-						</div>
-						<i class="guion">-</i>
-						<input type="text" name="user" placeholder="Usuario" class="input" maxlength="8"/>
-						<div class="msjBox animacion1"></div>
+				<form name="form_login" method="POST" action="CONTROL/login.php" />
+				<h2>Iniciar Sesión</h2>
+				<div class="cont_input">
+					<i class="icon-user left-icon"></i>
+					<div style="overflow: hidden; width: 20px;">
+						<select name="d_ID" class="input" style="width: 50px;">
+							<option value="V">V</option>
+							<option value="E">E</option>
+						</select>
 					</div>
-					<div class="cont_input">
-						<i class="icon-key left-icon"></i><input type="password" name="pass" placeholder="Contraseña" class="input" />
-						<label id="ojo" onclick="verPass(this)" class="icon-eye none" style="color: gray;"></label>
-						<div class="msjBox animacion1"></div>
-					</div>
-					<label for="enviar" class="btn_enviar">
-						<i class="icon-login"></i>
-						<p>Ingresar</p>
-					</label>
-					<input type="button" name="enviar" id="enviar" class="none" />
-					<a href="#" class="text_azul" onclick="abrir_ventana()"><b>¿Olvidaste tu contraseña?</b></a>
+					<i class="guion">-</i>
+					<input type="text" name="user" placeholder="Usuario" class="input" maxlength="8" />
+					<div class="msjBox animacion1"></div>
+				</div>
+				<div class="cont_input">
+					<i class="icon-key left-icon"></i><input type="password" name="pass" placeholder="Contraseña" class="input" />
+					<label id="ojo" onclick="verPass(this)" class="icon-eye none" style="color: gray;"></label>
+					<div class="msjBox animacion1"></div>
+				</div>
+				<label for="enviar" class="btn_enviar">
+					<i class="icon-login"></i>
+					<p>Ingresar</p>
+				</label>
+				<input type="button" name="enviar" id="enviar" class="none" />
+				<a href="#" class="text_azul" onclick="abrir_ventana()"><b>¿Olvidaste tu contraseña?</b></a>
 				</form>
 			</div>
 			<div class="clear"></div>
 			<div id="nota">
 				<b>Importante:</b> Si es primera vez que inicia sesión, su usuario y contraseña es la cédula.
-				<br/>
-				Debe cambiar la contraseña y las preguntas de seguridad cuando inicie sesión por primera vez. 
+				<br />
+				Debe cambiar la contraseña y las preguntas de seguridad cuando inicie sesión por primera vez.
 			</div>
 		</div>
 		<div id="fondo"></div>
@@ -186,7 +188,7 @@
 				</label>
 				<input type="button" name="enviar" id="enviarRecPass" class="none" />
 			</form>
-			
+
 			<!-- preguntas de seguridad -->
 			<form name="preguntasSeg" method="POST" action="CONTROL/recuperar_pass.php" class="none">
 				<input type="hidden" name="varRecPass" value="<?php echo $varRecPass; ?>">
@@ -229,4 +231,5 @@
 		</div>
 	</div>
 </body>
+
 </html>

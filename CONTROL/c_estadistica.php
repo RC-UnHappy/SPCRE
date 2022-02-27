@@ -120,7 +120,7 @@
 		$pdf->Cell(50,0,'Código Estadístico',1,1,'D');
 		#$pdf->Cell(50,0,'Año Escolar',1,1,'C');
 		$pdf->SetFont('helvetica','',12); 
-		$pdf->Cell(150,0,'UNIDAD EDUCATIVA NACIONAL "SAMUEL ROBINSON"',1,0,'C');
+		$pdf->Cell(150,0, 'Centro de Educación Inicial "La Medinera"',1,0,'C');
 		$pdf->Cell(50,0,'181416',1,0,'C');
 		$pdf->Cell(50,0,'OD04052802',1,0,'C');
 		#$pdf->Cell(50,0,$_GET['periodo'],1,1,'C');
